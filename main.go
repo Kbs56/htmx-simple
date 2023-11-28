@@ -25,8 +25,8 @@ func mainHandle(w http.ResponseWriter, r *http.Request) {
 	users := map[string][]User{
 		"Users": {
 			{ID: "AA715721", Name: "Kenneth Sheldon"},
-			{ID: "AA245917", Name: "William Henrion"},
-			{ID: "AA739440", Name: "Kevin Wong"},
+			{ID: "AA245917", Name: "Test User 2"},
+			{ID: "AA739440", Name: "Test User 3"},
 		},
 	}
 	tmpl := template.Must(template.ParseFiles("./templates/index.html"))
