@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css/" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.9"
+      integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="user-list" id="user-list">
+      {{ range .Users }} {{ block "user-element" .}}
+      <div class="user-pill">
+        <p>{{ .ID }}</p>
+        <p>{{ .Name }}</p>
+        <button>Delete</button>
+      </div>
+      {{ end }} {{ end }}
+    </ul>
+    <button
+      class="add-button"
+      hx-post="/click"
+      hx-target="#user-list"
+      hx-swap="beforeend"
+    >
+      Add User
+    </button>
+  </body>
+</html>
