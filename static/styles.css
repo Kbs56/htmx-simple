@@ -6,7 +6,6 @@ body {
   gap: 20px;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .user-list {
@@ -14,8 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
 }
 
 .user-pill {
